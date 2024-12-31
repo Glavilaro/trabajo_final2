@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jua&family=League+Gothic&family=Nanum+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    padding: 8px;
+    background: linear-gradient(#CCABD8 0%, white 100%);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+header h1 {
+    color: black;
+    display: inline;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #CCABD8;
+    background-color: #D0E6A5;
+    text-align: center;
+}
+
+h3 {
+    color: #D0E6A5;
+    margin-left: 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+nav a,
+.dropdown {
+    position: relative;
+    text-decoration: none;
+}
+
+nav button {
+    background-color: #86e3ce;
+    color: black;
+    border: none;
+    padding: 10px 35px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+nav button:hover {
+    background-color: #D0E6A5;
+    filter: brightness(1.2);
+}
+
+.reseña {
+    padding: 20px;
+    background: linear-gradient(0deg, #CCABD8 0%, white 100%);
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.reseña h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #CCABD8;
+    margin-bottom: 20px;
+}
+
+.reseña p {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Estilos para las tarjetas */
+.tarjetas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    background-color: #D0E6A5;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta p {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.banner {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.banner img {
+    width: 33.33%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.grid-item img {
+    width: 70%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.grid-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.grid-item p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#cart-section {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #86e3ce;
+    padding: 20px;
+    display: none;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin: 5px 0;
+}
+
+#cart-button:hover+#cart-section,
+#cart-section:hover {
+    display: block;
+}
+
+.footer {
+    background-color: #474747;
+    color: #CCABD8;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.ubicacion {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ubicacion h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #CCABD8;
+    margin-bottom: 20px;
+}
+
+.mapa iframe {
+    width: 70%;
+    height: 350px;
+    border: none;
+    border-radius: 8px;
+}
+
+.video-navidad {
+    margin-top: 20px;
+}
+
+.video-navidad h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #3e8e41;
+    margin-bottom: 10px;
+}
+
+.video-navidad iframe {
+    width: 80%;
+    height: 250px;
+    border: none;
+    border-radius: 8px;
+}
+
+.pedido-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #86e3ce;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.pedido-form label {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+.pedido-form input,
+.pedido-form select,
+.pedido-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.pedido-form input[type="submit"],
+.pedido-form input[type="reset"] {
+    width: auto;
+    background-color: #CCABD8;
+    color: black;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.pedido-form input[type="submit"]:hover,
+.pedido-form input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav button {
+        padding: 8px 30px;
+        margin: 5px 0;
+    }
+
+    .pedido-form {
+        max-width: 80%;
+    }
+
+    .pedido-form input,
+    .pedido-form select,
+    .pedido-form textarea {
+        width: 100%;
+    }
+}
+
+    /* Media Queries para tamaños de pantalla medianos */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav {
+            flex-direction: column;
+            align-items: center;
+            padding: 1px;
+        }
+
+        nav button {
+            padding: 8px 25px;
+            margin: 2px 0;
+        }
+
+        .pedido-form {
+            max-width: 90%;
+        }
+
+        .pedido-form input,
+        .pedido-form select,
+        .pedido-form textarea {
+            width: 100%;
+        }
+
+        h3 {
+            margin-left: 50px;
+        }
+
+        .banner {
+            flex-direction: column;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-item img {
+            width: 100%;
+        }
+    }
+
+    /* Media Queries para tamaños de pantalla pequeños */
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 24px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav button {
+            padding: 8px 20px;
+            margin: 5px 0;
+        }
+
+        .pedido-form {
+            max-width: 95%;
+        }
+
+        .pedido-form input,
+        .pedido-form select,
+        .pedido-form textarea {
+            width: 100%;
+        }
+
+        h3 {
+            margin-left: 20px;
+        }
+
+        .reseña p {
+            font-size: small;
+        }
+
+        .tarjeta p {
+            display: none;
+        }
+
+        .banner {
+            flex-direction: column;
+        }
+
+        .banner img {
+            width: 100%;
+        }
+
+        .grid-container {
+            grid-template-columns: 1fr;
+        }
+
+        .grid-item img {
+            width: 100%;
+        }
+    }
+
+    .btn-green {
+        background-color: #86e3ce;
+        border-color: #86e3ce;
+        color: white;
+    }
+
+    .btn-red {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+    .btn-green:hover,
+    .btn-red:hover {
+        opacity: 0.8;
+    }
